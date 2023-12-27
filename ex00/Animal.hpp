@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 14:38:16 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 18:30:02 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:21:30 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ public:
 
 	Animal &operator=(Animal const &rhs);
 
-	std::string getType(void) const;
+	std::string const &getType(void) const;
 	virtual void makeSound(void) const;
 
 protected:
