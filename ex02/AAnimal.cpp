@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 14:40:11 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 21:11:39 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:34:20 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,8 @@ AAnimal::AAnimal(void) : type("")
 	return;
 }
 
-AAnimal::AAnimal(AAnimal const &src)
+AAnimal::AAnimal(AAnimal const &src) : type(src.type)
 {
-	*this = src;
 	std::cout << "AAnimal copy constructor called" << std::endl;
 
 	return;
@@ -42,7 +41,7 @@ AAnimal &AAnimal::operator=(AAnimal const &rhs)
 	return *this;
 }
 
-std::string AAnimal::getType(void) const
+std::string const &AAnimal::getType(void) const
 {
 	return this->type;
 }
