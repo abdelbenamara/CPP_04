@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:21:14 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 19:52:45 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/27 16:42:27 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Cat::Cat(void) : Animal()
 {
-	this->type = "Cat";
 	std::cout << "Cat default constructor called" << std::endl;
+	this->type = "Cat";
 
 	return;
 }
