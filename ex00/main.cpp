@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:33:51 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 18:14:04 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/27 16:57:42 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,7 @@ int main(void)
 
 	std::cout << wrongI->getType() << " " << std::endl;
 	wrongI->makeSound(); // will output the wrong cat sound!
+	static_cast<WrongCat const *>(wrongI)->makeSound();
 	wrongMeta->makeSound();
 
 	delete wrongI;
