@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:16:33 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 19:52:34 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/27 16:42:37 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 Dog::Dog(void) : Animal()
 {
-	this->type = "Dog";
 	std::cout << "Dog default constructor called" << std::endl;
+	this->type = "Dog";
 
 	return;
 }
