@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 19:35:39 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 19:47:13 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/23 19:36:01 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ Brain::Brain(void)
 
 Brain::Brain(Brain const &src)
 {
-	*this = src;
 	std::cout << "Brain copy constructor called" << std::endl;
+	for (int i = 0; i < 100; ++i)
+		this->ideas[i] = src.ideas[i];
 
 	return;
 }
