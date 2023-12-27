@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:33:12 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/18 21:01:19 by abenamar         ###   ########.fr       */
+/*   Updated: 2023/12/27 16:42:52 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 WrongCat::WrongCat(void) : WrongAnimal()
 {
-	this->type = "WrongCat";
 	std::cout << "WrongCat default constructor called" << std::endl;
+	this->type = "WrongCat";
 
 	return;
 }
