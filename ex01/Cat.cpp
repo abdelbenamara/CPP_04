@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:21:14 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:38:10 by abenamar         ###   ########.fr       */
+/*   Updated: 2024/01/07 13:45:19 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 Cat::Cat(void) : Animal(), brain(0)
 {
-	std::cout << "Cat default constructor called" << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << "Cat default constructor called";
+	std::cout << "\033[0m" << std::endl;
 	this->type = "Cat";
 	this->brain = new Brain();
 
@@ -23,7 +25,9 @@ Cat::Cat(void) : Animal(), brain(0)
 
 Cat::Cat(Cat const &src) : Animal(src), brain(0)
 {
-	std::cout << "Cat copy constructor called" << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << "Cat copy constructor called";
+	std::cout << "\033[0m" << std::endl;
 	this->brain = new Brain(*(src.brain));
 
 	return;
@@ -31,7 +35,9 @@ Cat::Cat(Cat const &src) : Animal(src), brain(0)
 
 Cat::~Cat(void)
 {
-	std::cout << "Cat destructor called" << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << "Cat destructor called";
+	std::cout << "\033[0m" << std::endl;
 	delete brain;
 
 	return;
@@ -52,5 +58,7 @@ Cat &Cat::operator=(Cat const &rhs)
 
 void Cat::makeSound(void) const
 {
-	std::cout << this->type << " makes a meow sound" << std::endl;
+	std::cout << "\033[1;31m";
+	std::cout << this->type << " makes a meow sound";
+	std::cout << "\033[0m" << std::endl;
 }
