@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:16:33 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/23 19:38:15 by abenamar         ###   ########.fr       */
+/*   Updated: 2024/01/07 13:46:44 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 Dog::Dog(void) : Animal(), brain(0)
 {
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog default constructor called";
+	std::cout << "\033[0m" << std::endl;
 	this->type = "Dog";
 	this->brain = new Brain();
 
@@ -23,7 +25,9 @@ Dog::Dog(void) : Animal(), brain(0)
 
 Dog::Dog(Dog const &src) : Animal(src), brain(0)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog copy constructor called";
+	std::cout << "\033[0m" << std::endl;
 	this->brain = new Brain(*(src.brain));
 
 	return;
@@ -31,7 +35,9 @@ Dog::Dog(Dog const &src) : Animal(src), brain(0)
 
 Dog::~Dog(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog destructor called";
+	std::cout << "\033[0m" << std::endl;
 	delete brain;
 
 	return;
@@ -52,5 +58,7 @@ Dog &Dog::operator=(Dog const &rhs)
 
 void Dog::makeSound(void) const
 {
-	std::cout << this->type << " makes a woof sound" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << this->type << " makes a woof sound";
+	std::cout << "\033[0m" << std::endl;
 }
