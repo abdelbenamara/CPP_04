@@ -6,7 +6,7 @@
 /*   By: abenamar <abenamar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/18 17:16:33 by abenamar          #+#    #+#             */
-/*   Updated: 2023/12/27 16:42:37 by abenamar         ###   ########.fr       */
+/*   Updated: 2024/01/07 13:40:59 by abenamar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 Dog::Dog(void) : Animal()
 {
-	std::cout << "Dog default constructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog default constructor called";
+	std::cout << "\033[0m" << std::endl;
 	this->type = "Dog";
 
 	return;
@@ -22,14 +24,18 @@ Dog::Dog(void) : Animal()
 
 Dog::Dog(Dog const &src) : Animal(src)
 {
-	std::cout << "Dog copy constructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog copy constructor called";
+	std::cout << "\033[0m" << std::endl;
 
 	return;
 }
 
 Dog::~Dog(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << "Dog destructor called";
+	std::cout << "\033[0m" << std::endl;
 
 	return;
 }
@@ -43,5 +49,7 @@ Dog &Dog::operator=(Dog const &rhs)
 
 void Dog::makeSound(void) const
 {
-	std::cout << this->type << " makes a woof sound" << std::endl;
+	std::cout << "\033[1;32m";
+	std::cout << this->type << " makes a woof sound";
+	std::cout << "\033[0m" << std::endl;
 }
